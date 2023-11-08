@@ -1,0 +1,123 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/componentes/general/Header/Header.module.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@media only screen and (min-width: 801px) {
+  .Header_mobile-only___d5GQ {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .Header_desktop-only__jU84E {
+    display: none !important;
+  }
+}
+
+@keyframes Header_moveUpDown__oCkjV {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2rem);
+  }
+}
+.Header_header__TZB4U {
+  background-color: #6916ca;
+  width: 100%;
+}
+.Header_header__logo__3Kz9j img {
+  width: 13rem;
+  height: auto;
+}
+.Header_header__wrapper__gMbPx {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Header_header__nav__udRHV {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+@media only screen and (max-width: 800px) {
+  .Header_header__nav__udRHV {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #6916ca;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    -webkit-clip-path: circle(100px at 90% -15%);
+            clip-path: circle(100px at 90% -15%);
+    transition: 1s ease-out;
+    pointer-events: none;
+  }
+  .Header_header__nav__udRHV[data-show=true] {
+    -webkit-clip-path: circle(1500px at 90% -15%) !important;
+            clip-path: circle(1500px at 90% -15%) !important;
+    pointer-events: all !important;
+  }
+  .Header_header__nav__udRHV[data-show=true].Header_header__nav__udRHV {
+    position: fixed;
+    top: 2.6rem;
+    right: 1.6rem;
+    border-top-color: transparent;
+  }
+  .Header_header__nav__udRHV[data-show=true].Header_header__nav__udRHV::before {
+    transform: rotate(135deg);
+  }
+  .Header_header__nav__udRHV[data-show=true].Header_header__nav__udRHV::after {
+    transform: rotate(-135deg);
+    top: -0.7rem;
+  }
+}
+.Header_header__nav__udRHV li a {
+  font-size: 1.4rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.Header_header__nav__udRHV li a:hover {
+  border-bottom: 0.1rem solid #fff;
+}
+.Header_header__hamburguer__eK_Kq {
+  border: none;
+  background: none;
+  border-top: 0.3rem solid #fff;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
+@media only screen and (max-width: 800px) {
+  .Header_header__hamburguer__eK_Kq {
+    display: block;
+  }
+}
+.Header_header__hamburguer__eK_Kq::before, .Header_header__hamburguer__eK_Kq::after {
+  content: " ";
+  display: block;
+  width: 3rem;
+  height: 0.3rem;
+  background: #fff;
+  margin-top: 0.5rem;
+  position: relative;
+  transition: 0.3s;
+}
+.Header_header__hamburguer__eK_Kq[data-animate=true] {
+  position: fixed;
+  top: 2.9rem;
+  right: 4.9rem;
+  border-top-color: transparent;
+}
+.Header_header__hamburguer__eK_Kq[data-animate=true]::before {
+  transform: rotate(135deg);
+}
+.Header_header__hamburguer__eK_Kq[data-animate=true]::after {
+  transform: rotate(-135deg);
+  top: -7px;
+}

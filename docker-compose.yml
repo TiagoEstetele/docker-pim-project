@@ -1,0 +1,18 @@
+version: '3'
+services:
+  api:
+    image: mcr.microsoft.com/dotnet/aspnet:7.0
+    build:
+      context: ./api-pim-aml
+      dockerfile: TESTE-API/Dockerfile
+    ports:
+      - "8000:80"
+  frontend:
+    image: node:16
+    build:
+      context: ./pim-unip-okn
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api

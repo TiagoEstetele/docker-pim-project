@@ -1,0 +1,117 @@
+@import "../../../assets/sass/utilities/utilities";
+
+.header {
+  background-color: #6916ca;
+  width: 100%;
+
+  &__logo {
+    & img {
+      width: 13rem;
+      height: auto;
+    }
+  }
+
+  &__wrapper {
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+
+    @include max(800) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #6916ca;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0;
+      clip-path: circle(100px at 90% -15%);
+      transition: 1s ease-out;
+      pointer-events: none;
+
+      &[data-show="true"] {
+        clip-path: circle(1500px at 90% -15%) !important;
+        pointer-events: all !important;
+
+        &.header__nav {
+          position: fixed;
+          top: 2.6rem;
+          right: 1.6rem;
+          border-top-color: transparent;
+
+          &::before {
+            transform: rotate(135deg);
+          }
+
+          &::after {
+            transform: rotate(-135deg);
+            top: -0.7rem;
+          }
+        }
+      }
+    }
+
+    & li {
+      & a {
+        font-size: 1.4rem;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 500;
+
+        &:hover {
+          border-bottom: 0.1rem solid #fff;
+        }
+      }
+    }
+  }
+
+  &__hamburguer {
+    border: none;
+    background: none;
+    border-top: 0.3rem solid #fff;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+
+    @include max(800) {
+      display: block;
+    }
+
+    &::before,
+    &::after {
+      content: " ";
+      display: block;
+      width: 3rem;
+      height: 0.3rem;
+      background: #fff;
+      margin-top: 0.5rem;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    &[data-animate="true"] {
+      position: fixed;
+      top: 2.9rem;
+      right: 4.9rem;
+      border-top-color: transparent;
+
+      &::before {
+        transform: rotate(135deg);
+      }
+
+      &::after {
+        transform: rotate(-135deg);
+        top: -7px;
+      }
+    }
+  }
+}

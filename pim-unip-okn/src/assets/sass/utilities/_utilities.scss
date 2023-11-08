@@ -1,0 +1,33 @@
+@mixin min($screen) {
+  @media only screen and (min-width: $screen+"px") {
+    @content;
+  }
+}
+
+@mixin max($screen) {
+  @media only screen and (max-width: $screen+"px") {
+    @content;
+  }
+}
+
+.mobile-only {
+  @include min(801) {
+    display: none !important;
+  }
+}
+
+.desktop-only {
+  @include max(800) {
+    display: none !important;
+  }
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2rem);
+  }
+}
