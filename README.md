@@ -1,6 +1,7 @@
 
 # Sistema em docker PIM IV UNIVERSIDADE PAULISTA
 
+Projeto desenvolvido como parte do Projeto Integrado Multidisciplinar IV (PIM), com o propósito de aplicar os conhecimentos adquiridos ao longo do curso de Análise e Desenvolvimento de Sistemas.
 
 Neste repositório, você encontrará o Docker Compose configurado para executar dois sistemas: o Front-end, desenvolvido com NEXT.JS, TypeScript e estilizado com SASS/SCSS; e o Back-end, que consiste em uma API construída em C# com integração do Swagger.
 
