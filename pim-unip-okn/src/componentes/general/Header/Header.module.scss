@@ -12,7 +12,7 @@
   }
 
   &__wrapper {
-    padding: 3rem;
+    padding: 2.4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,7 +44,7 @@
 
         &.header__nav {
           position: fixed;
-          top: 2.6rem;
+          top: 1.6rem;
           right: 1.6rem;
           border-top-color: transparent;
 
@@ -64,9 +64,12 @@
       & a {
         font-size: 1.4rem;
         color: #fff;
-        text-transform: uppercase;
         font-weight: 500;
-
+        padding: 1rem;
+        border-radius: 1rem;
+        &[data-current="true"] {
+          background-color: #470098;
+        }
         &:hover {
           border-bottom: 0.1rem solid #fff;
         }
@@ -112,6 +115,15 @@
         transform: rotate(-135deg);
         top: -7px;
       }
+    }
+  }
+
+  &__user {
+    width: 3rem;
+    height: auto;
+
+    @include max(800) {
+      display: none;
     }
   }
 }

@@ -1,0 +1,85 @@
+.employees {
+  &__card {
+    width: 40rem;
+    height: 20rem;
+    padding: 2rem 4rem;
+    -webkit-box-shadow: 10px 10px 56px -4px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 10px 10px 56px -4px rgba(0, 0, 0, 0.18);
+    box-shadow: 10px 10px 56px -4px rgba(0, 0, 0, 0.18);
+    border-radius: 2rem;
+
+    & span {
+      font-weight: 500;
+      font-size: 1.4rem;
+    }
+
+    & p {
+      font-size: 1.4rem;
+      margin: 0.5rem 0;
+    }
+  }
+
+  &__text {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__avatar {
+    width: 4rem;
+    height: auto;
+    margin-left: 0.5rem;
+  }
+
+  &__main {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    & h3 {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    & > p {
+      padding: 0.3rem 1rem;
+      background-color: #7e50b4;
+      border: 0.1rem solid #6916ca;
+      font-weight: 600;
+      border-radius: 1rem;
+      color: #fff;
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    background-color: transparent;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    gap: 1rem;
+    text-align: center;
+    & div {
+      &:first-of-type,
+      &:last-of-type {
+        width: 50%;
+        text-align: center;
+        background-color: #6916ca;
+        border-radius: 1rem;
+      }
+
+      & button {
+        color: #fff;
+        font-size: 1.5rem;
+        padding: 1rem;
+        width: 100%;
+        border-radius: 1rem;
+        font-weight: 500;
+
+        &:hover {
+          background-color: #7e50b4;
+        }
+      }
+    }
+  }
+}

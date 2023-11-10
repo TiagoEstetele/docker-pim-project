@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import { inter } from "@/assets/fonts";
 import "@/assets/sass/utilities/wordpressCompatibility.scss";
 import "@/assets/sass/main.scss";

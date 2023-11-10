@@ -4,9 +4,22 @@ import styles from "./Header.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import Avatar from "../../../../public/adminavatar.png";
 
 export function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+
+  // if (typeof window !== "undefined") {
+  //   const currentURL = window.location.pathname;
+  //   const parts = currentURL.split("/");
+  //   const lastPart = parts[parts.length - 1];
+  //   const linkId = document.querySelectorAll("#nav li a");
+  //   linkId.forEach((link) => {
+  //     if (link.id === lastPart) {
+  //       link.setAttribute("data-current", "true");
+  //     }
+  //   });
+  // }
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -15,7 +28,7 @@ export function Header() {
     <header className={styles.header}>
       <nav className={`${styles.header__wrapper} wrapper`}>
         <div className={styles.header__logo}>
-          <Link href="/dashboard">
+          <Link href="./funcionarios">
             <Image
               src="/logo-okn.svg"
               alt="Logo OKN"
@@ -33,17 +46,40 @@ export function Header() {
         <ul
           className={`${styles.header__nav}`}
           data-show={isNavOpen ? "true" : ""}
+          id="nav"
         >
-          <li>
-            <Link href="/">Usuários</Link>
+          {/* <li>
+            <Link href="./funcionarios" id="funcionarios" data-current="true">
+              Funcionários
+            </Link>
           </li>
           <li>
-            <Link href="/">Cadastrar Usuário</Link>
+            <Link href="./cadastrar-funcionarios" id="cadastrar-funcionarios">
+              Cadastrar funcionários
+            </Link>
+          </li> */}
+          <li>
+            <Link href="./perfil" id="perfil">
+              Perfil
+            </Link>
           </li>
           <li>
-            <Link href="/">Editar Usuário</Link>
+            <Link href="./bater-ponto" id="bater-ponto" data-current="true">
+              Bater ponto
+            </Link>
+          </li>
+          <li>
+            <Link href="./holerite" id="holerite">
+              Holerite
+            </Link>
           </li>
         </ul>
+
+        <div className={styles.header__user}>
+          <div className={styles.header__avatar}>
+            <Image src={Avatar} alt="Avar logo" />
+          </div>
+        </div>
       </nav>
     </header>
   );
