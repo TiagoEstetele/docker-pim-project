@@ -1,0 +1,27 @@
+# Ignorar todos os diretórios e arquivos .vs
+**/.vs/
+
+# Ignorar todos os diretórios e arquivos node_modules
+**/node_modules/
+
+# Ignorar todos os diretórios e arquivos .next
+**/.next/
+
+# Ignorar todos os diretórios e arquivos bin e obj
+**/bin/
+**/obj/
+
+# Ignorar todos os arquivos .log
+*.log
+
+# Ignorar todos os arquivos .tmp
+*.tmp
+
+# Ignorar todos os arquivos .bak
+*.bak
+
+# Ignorar todos os arquivos .swp
+*.swp
+
+# Ignorar todos os arquivos .DS_Store
+.DS_Store
