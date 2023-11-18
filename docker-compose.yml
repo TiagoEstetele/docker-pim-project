@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   api:
     image: mcr.microsoft.com/dotnet/aspnet:7.0
@@ -16,3 +16,6 @@ services:
       - "3000:3000"
     depends_on:
       - api
+    volumes:
+      - ./pim-unip-okn:/app
+      - /app/node_modules
