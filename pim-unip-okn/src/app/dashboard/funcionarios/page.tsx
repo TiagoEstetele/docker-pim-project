@@ -1,45 +1,51 @@
+"use client";
+import { useState, useEffect } from "react";
 import styles from "./funcionarios.module.scss";
 import { EmployeesCard } from "@/componentes/general";
+import axios from "axios";
 
-export default function dashboardFuncionarios() {
+type Emplooy = {
+  id_funcionario: number;
+  nome: string;
+  banco: string;
+  telefone: string;
+  data_admissao: string;
+  data_nascimento: string;
+};
+
+export default function DashboardFuncionarios() {
+  const [emplooys, setEmplooy] = useState<Emplooy[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:8000/api/v1/funcionarios"
+        );
+
+        const data = response.data;
+        setEmplooy(data);
+      } catch (error) {
+        console.error("Erro na requisição:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <section className={`${styles.employees} wrapper`}>
       <div className={styles.employees__cards}>
-        <EmployeesCard
-          name="Tiago Estetele"
-          cargo="Estagiário"
-          telefone="16 991366797"
-          dataAdmissao="12/09/2013"
-          dataNascimento="16/08/2001"
-        />
-        <EmployeesCard
-          name="Ana Silva"
-          cargo="Assistente de Vendas"
-          telefone="16 999876543"
-          dataAdmissao="05/03/2018"
-          dataNascimento="25/11/1995"
-        />
-        <EmployeesCard
-          name="Carlos Souza"
-          cargo="Gerente de Projetos"
-          telefone="16 987654321"
-          dataAdmissao="10/02/2015"
-          dataNascimento="15/07/1989"
-        />
-        <EmployeesCard
-          name="Mariana Ferreira"
-          cargo="Desenvolvedor Sênior"
-          telefone="16 996543210"
-          dataAdmissao="20/04/2012"
-          dataNascimento="12/09/1985"
-        />
-        <EmployeesCard
-          name="João Santos"
-          cargo="Analista de Marketing"
-          telefone="16 998877665"
-          dataAdmissao="30/07/2017"
-          dataNascimento="10/12/1990"
-        />
+        {emplooys.map((emplooy) => (
+          <EmployeesCard
+            key={emplooy.id_funcionario}
+            name={emplooy.nome}
+            cargo={emplooy.banco}
+            telefone={emplooy.telefone}
+            dataAdmissao={emplooy.data_admissao}
+            dataNascimento={emplooy.data_nascimento}
+          />
+        ))}
       </div>
     </section>
   );

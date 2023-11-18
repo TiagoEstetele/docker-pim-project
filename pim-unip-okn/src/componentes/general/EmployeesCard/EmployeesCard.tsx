@@ -2,7 +2,7 @@ import styles from "./EmployeesCard.module.scss";
 import Image from "next/image";
 import Avatar from "../../../../public/employuseravatar.png";
 
-interface EmployeesCardProps {
+export default interface EmployeesCardProps {
   name: string;
   cargo: string;
   telefone: string;

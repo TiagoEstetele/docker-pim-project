@@ -76,6 +76,10 @@ namespace TESTE_API
             });
 
             builder.Services.AddScoped<FuncionarioRepository>();
+
+            #region [Cors]
+            builder.Services.AddCors();
+            #endregion
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -84,6 +88,15 @@ namespace TESTE_API
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            #region [Cors]
+            app.UseCors(c =>
+            {
+                c.AllowAnyHeader();
+                c.AllowAnyMethod();
+                c.AllowAnyOrigin();
+            });
+            #endregion
 
             app.UseHttpsRedirection();
 
