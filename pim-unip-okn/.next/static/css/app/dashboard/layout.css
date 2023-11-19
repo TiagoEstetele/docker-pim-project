@@ -1,3 +1,74 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/componentes/general/EmployeesCard/EmployeesCard.module.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.EmployeesCard_employees__card__YB_df {
+  width: 40rem;
+  height: 20rem;
+  padding: 2rem 4rem;
+  box-shadow: 10px 10px 56px -4px rgba(0, 0, 0, 0.18);
+  border-radius: 2rem;
+}
+.EmployeesCard_employees__card__YB_df span {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+.EmployeesCard_employees__card__YB_df p {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+}
+.EmployeesCard_employees__text__eleLS {
+  display: flex;
+  justify-content: space-between;
+}
+.EmployeesCard_employees__avatar__GxXjv {
+  width: 4rem;
+  height: auto;
+  margin-left: 0.5rem;
+}
+.EmployeesCard_employees__main__BtBYC {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.EmployeesCard_employees__main__BtBYC h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.EmployeesCard_employees__main__BtBYC > p {
+  padding: 0.3rem 1rem;
+  background-color: #7e50b4;
+  border: 0.1rem solid #6916ca;
+  font-weight: 600;
+  border-radius: 1rem;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+}
+.EmployeesCard_employees__buttons__rAQeX {
+  display: flex;
+  background-color: transparent;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  gap: 1rem;
+  text-align: center;
+}
+.EmployeesCard_employees__buttons__rAQeX div:first-of-type, .EmployeesCard_employees__buttons__rAQeX div:last-of-type {
+  width: 50%;
+  text-align: center;
+  background-color: #6916ca;
+  border-radius: 1rem;
+}
+.EmployeesCard_employees__buttons__rAQeX div button {
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 500;
+}
+.EmployeesCard_employees__buttons__rAQeX div button:hover {
+  background-color: #7e50b4;
+}
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/componentes/general/Header/Header.module.scss ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -30,7 +101,7 @@
   height: auto;
 }
 .Header_header__wrapper__gMbPx {
-  padding: 3rem;
+  padding: 2.4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -64,7 +135,7 @@
   }
   .Header_header__nav__udRHV[data-show=true].Header_header__nav__udRHV {
     position: fixed;
-    top: 2.6rem;
+    top: 1.6rem;
     right: 1.6rem;
     border-top-color: transparent;
   }
@@ -79,8 +150,12 @@
 .Header_header__nav__udRHV li a {
   font-size: 1.4rem;
   color: #fff;
-  text-transform: uppercase;
   font-weight: 500;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.Header_header__nav__udRHV li a[data-current=true] {
+  background-color: #470098;
 }
 .Header_header__nav__udRHV li a:hover {
   border-bottom: 0.1rem solid #fff;
@@ -120,4 +195,40 @@
 .Header_header__hamburguer__eK_Kq[data-animate=true]::after {
   transform: rotate(-135deg);
   top: -7px;
+}
+.Header_header__user__2fhV7 {
+  width: 3rem;
+  height: auto;
+}
+@media only screen and (max-width: 800px) {
+  .Header_header__user__2fhV7 {
+    display: none;
+  }
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/componentes/general/Loading/Loading.module.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Loading_loading__o5cWv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  padding: 5rem 1rem;
+}
+.Loading_loading__load__i0Mj7 {
+  border: 1rem solid #f3f3f3;
+  border-top: 1rem solid #6916ca;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  animation: Loading_spin__u7_LK 2s linear infinite;
+}
+
+@keyframes Loading_spin__u7_LK {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -34,7 +34,7 @@ namespace TESTE_API.Controllers
             {
                 user = new
                 {
-                    Id = user.id_funcionario,
+                    Id = user.id_cargo,
                     Name = user.nome, 
                     Email = user.email
                 },
