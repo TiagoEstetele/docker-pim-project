@@ -1,6 +1,5 @@
 import styles from "./EmployeesCard.module.scss";
 import Image from "next/image";
-import Avatar from "../../../../public/employuseravatar.png";
 
 export default interface EmployeesCardProps {
   name: string;
@@ -8,6 +7,7 @@ export default interface EmployeesCardProps {
   telefone: string;
   dataAdmissao: string;
   dataNascimento: string;
+  ativo: true | false;
 }
 
 export function EmployeesCard({
@@ -16,6 +16,7 @@ export function EmployeesCard({
   telefone,
   dataAdmissao,
   dataNascimento,
+  ativo,
 }: EmployeesCardProps) {
   return (
     <>
@@ -25,13 +26,12 @@ export function EmployeesCard({
             <h3>{name}</h3>
             <p>{cargo}</p>
           </div>
-          <div className={styles.employees__avatar}>
-            <Image
-              src={Avatar}
-              width={Avatar.width}
-              height={Avatar.height}
-              alt="Avatar logo"
-            />
+          <div className={styles.employees__status}>
+            {ativo === true ? (
+              <div style={{ backgroundColor: "#8bf42b" }}></div>
+            ) : (
+              <div style={{ backgroundColor: "#db4437" }}></div>
+            )}
           </div>
         </article>
         <div className={styles.employees__contents}>

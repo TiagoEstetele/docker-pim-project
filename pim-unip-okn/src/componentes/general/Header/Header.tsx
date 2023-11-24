@@ -1,26 +1,45 @@
 "use client";
-
 import styles from "./Header.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Avatar from "../../../../public/adminavatar.png";
+import jwt from "jsonwebtoken";
+import { Logout } from "@/componentes/general/";
+
+interface User {
+  role?: string;
+  certserialnumber?: string;
+}
 
 export function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [user, setUser] = useState<User | null>(null);
+  const [logout, setLogout] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (token) {
+      const decodedToken = jwt.decode(token);
+
+      setUser(decodedToken as User);
+    }
+  }, []);
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
 
-  const storedUser = localStorage.getItem("user");
-  const user = storedUser ? JSON.parse(storedUser) : null;
+  const toggleOPen = () => {
+    setLogout((prevState) => !prevState);
+  };
 
   return (
     <header className={styles.header}>
       <nav className={`${styles.header__wrapper} wrapper`}>
         <div className={styles.header__logo}>
-          <Link href="./funcionarios">
+          <Link href="./homepage">
             <Image
               src="/logo-okn.svg"
               alt="Logo OKN"
@@ -35,19 +54,33 @@ export function Header() {
           className={styles.header__hamburguer}
           data-animate={isNavOpen ? "true" : ""}
         ></button>
-        {user.id === 1 ? (
+        {user && user.role === "1" ? (
           <ul
             className={`${styles.header__nav}`}
             data-show={isNavOpen ? "true" : ""}
             id="nav"
           >
             <li>
-              <Link href="./perfil" id="perfil">
+              <Link href="./homepage" id="perfil">
+                Página Principal
+              </Link>
+            </li>
+            <li>
+              <Link href="./perfil" id="bater-ponto" data-current="true">
+                Perfil
+              </Link>
+            </li>
+            <li>
+              <Link href="./funcionarios" id="perfil">
                 Funcionarios
               </Link>
             </li>
             <li>
-              <Link href="./bater-ponto" id="bater-ponto" data-current="true">
+              <Link
+                href="./cadastrar-funcionarios"
+                id="bater-ponto"
+                data-current="true"
+              >
                 Cadastrar
               </Link>
             </li>
@@ -59,27 +92,30 @@ export function Header() {
             id="nav"
           >
             <li>
+              <Link href="./homepage" id="perfil">
+                Página Principal
+              </Link>
+            </li>
+            <li>
               <Link href="./perfil" id="perfil">
                 Perfil
               </Link>
             </li>
             <li>
-              <Link href="./bater-ponto" id="bater-ponto" data-current="true">
-                Bater ponto
+              <Link href="./perfil" id="perfil">
+                Holerite
               </Link>
             </li>
             <li>
-              <Link href="./holerite" id="holerite">
-                Holerite
+              <Link href="./bater-ponto" id="perfil">
+                Bater Ponto
               </Link>
             </li>
           </ul>
         )}
 
         <div className={styles.header__user}>
-          <div className={styles.header__avatar}>
-            <Image src={Avatar} alt="Avar logo" />
-          </div>
+          <Logout open={logout} onClick={toggleOPen} />
         </div>
       </nav>
     </header>

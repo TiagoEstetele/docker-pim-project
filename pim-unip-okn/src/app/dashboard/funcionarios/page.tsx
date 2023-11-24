@@ -13,6 +13,8 @@ type Emplooy = {
   telefone: string;
   data_admissao: string;
   data_nascimento: string;
+  cpf: string;
+  ativo: true | false;
 };
 
 export default function DashboardFuncionarios() {
@@ -39,25 +41,24 @@ export default function DashboardFuncionarios() {
   }, []);
 
   return (
-    <AuthChecker>
-      <section className={`${styles.employees} wrapper`}>
-        <div className={styles.employees__cards}>
-          {loading ? (
-            <Loading />
-          ) : (
-            emplooys.map((emplooy) => (
-              <EmployeesCard
-                key={emplooy.id_funcionario}
-                name={emplooy.nome}
-                cargo={emplooy.banco}
-                telefone={emplooy.telefone}
-                dataAdmissao={emplooy.data_admissao}
-                dataNascimento={emplooy.data_nascimento}
-              />
-            ))
-          )}
-        </div>
-      </section>
-    </AuthChecker>
+    <section className={`${styles.employees} wrapper`}>
+      <div className={styles.employees__cards}>
+        {loading ? (
+          <Loading />
+        ) : (
+          emplooys.map((emplooy) => (
+            <EmployeesCard
+              key={emplooy.id_funcionario}
+              name={emplooy.nome}
+              cargo={emplooy.cpf}
+              telefone={emplooy.telefone}
+              dataAdmissao={emplooy.data_admissao}
+              dataNascimento={emplooy.data_nascimento}
+              ativo={emplooy.ativo}
+            />
+          ))
+        )}
+      </div>
+    </section>
   );
 }

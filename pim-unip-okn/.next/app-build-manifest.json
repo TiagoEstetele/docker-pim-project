@@ -12,16 +12,35 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+    "/dashboard/homepage/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/dashboard/homepage/page.css",
+      "static/chunks/app/dashboard/homepage/page.js"
+    ],
     "/dashboard/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/dashboard/layout.css",
       "static/chunks/app/dashboard/layout.js"
     ],
-    "/dashboard/homepage/page": [
+    "/dashboard/perfil/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/dashboard/homepage/page.js"
+      "static/css/app/dashboard/perfil/page.css",
+      "static/chunks/app/dashboard/perfil/page.js"
+    ],
+    "/dashboard/funcionarios/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/dashboard/funcionarios/page.css",
+      "static/chunks/app/dashboard/funcionarios/page.js"
+    ],
+    "/dashboard/cadastrar-funcionarios/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/dashboard/cadastrar-funcionarios/page.css",
+      "static/chunks/app/dashboard/cadastrar-funcionarios/page.js"
     ]
   }
 }

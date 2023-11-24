@@ -1,0 +1,13 @@
+.homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+
+  & > h1 {
+    max-width: 60rem;
+    text-align: center;
+    font-weight: 400;
+    font-size: 2.7rem;
+  }
+}

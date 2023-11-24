@@ -1,0 +1,47 @@
+.header {
+  &__logout {
+    position: relative;
+    & svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &__confirm {
+    position: absolute;
+    top: 3.5rem;
+    right: 50%;
+    width: 15rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 10px 10px 56px -4px rgba(0, 0, 0, 0.18);
+    text-align: center;
+    transition: 2s ease-in-out;
+
+    & > p {
+      font-size: 1.3rem;
+      font-weight: 600;
+      padding: 0.5rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-evenly;
+
+    & > button {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      color: #fff;
+      font-weight: 600;
+      &:first-of-type {
+        background-color: #8bf42b;
+      }
+
+      &:last-of-type {
+        background-color: #f74236;
+      }
+    }
+  }
+}

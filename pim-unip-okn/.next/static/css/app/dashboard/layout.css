@@ -20,10 +20,20 @@
   display: flex;
   justify-content: space-between;
 }
-.EmployeesCard_employees__avatar__GxXjv {
+.EmployeesCard_employees__status__uNsKF {
   width: 4rem;
   height: auto;
   margin-left: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.EmployeesCard_employees__status__uNsKF div {
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #6916ca;
 }
 .EmployeesCard_employees__main__BtBYC {
   display: flex;
@@ -68,6 +78,76 @@
 }
 .EmployeesCard_employees__buttons__rAQeX div button:hover {
   background-color: #7e50b4;
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/componentes/general/Loading/Loading.module.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Loading_loading__o5cWv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  padding: 5rem 1rem;
+}
+.Loading_loading__load__i0Mj7 {
+  border: 1rem solid #f3f3f3;
+  border-top: 1rem solid #6916ca;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  animation: Loading_spin__u7_LK 2s linear infinite;
+}
+
+@keyframes Loading_spin__u7_LK {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/componentes/general/Logout/Logout.module.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Logout_header__logout__wdqBS {
+  position: relative;
+}
+.Logout_header__logout__wdqBS svg {
+  width: 2rem;
+  height: 2rem;
+}
+.Logout_header__confirm__qfxPp {
+  position: absolute;
+  top: 3.5rem;
+  right: 50%;
+  width: 15rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 10px 10px 56px -4px rgba(0, 0, 0, 0.18);
+  text-align: center;
+  transition: 2s ease-in-out;
+}
+.Logout_header__confirm__qfxPp > p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 0.5rem;
+}
+.Logout_header__buttons__MTiEF {
+  display: flex;
+  justify-content: space-evenly;
+}
+.Logout_header__buttons__MTiEF > button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-weight: 600;
+}
+.Logout_header__buttons__MTiEF > button:first-of-type {
+  background-color: #8bf42b;
+}
+.Logout_header__buttons__MTiEF > button:last-of-type {
+  background-color: #f74236;
 }
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/componentes/general/Header/Header.module.scss ***!
@@ -203,32 +283,5 @@
 @media only screen and (max-width: 800px) {
   .Header_header__user__2fhV7 {
     display: none;
-  }
-}
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/componentes/general/Loading/Loading.module.scss ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.Loading_loading__o5cWv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-  padding: 5rem 1rem;
-}
-.Loading_loading__load__i0Mj7 {
-  border: 1rem solid #f3f3f3;
-  border-top: 1rem solid #6916ca;
-  border-radius: 50%;
-  width: 6rem;
-  height: 6rem;
-  animation: Loading_spin__u7_LK 2s linear infinite;
-}
-
-@keyframes Loading_spin__u7_LK {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }

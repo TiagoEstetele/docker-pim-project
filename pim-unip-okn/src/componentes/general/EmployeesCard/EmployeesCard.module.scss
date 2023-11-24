@@ -24,10 +24,21 @@
     justify-content: space-between;
   }
 
-  &__avatar {
+  &__status {
     width: 4rem;
     height: auto;
     margin-left: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & div {
+      width: 0.5rem;
+      height: 0.5rem;
+      padding: 0.5rem;
+      border-radius: 50%;
+      background-color: #6916ca;
+    }
   }
 
   &__main {
