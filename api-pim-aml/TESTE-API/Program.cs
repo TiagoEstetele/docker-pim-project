@@ -8,6 +8,7 @@ using TESTE_API.Model;
 using Microsoft.OpenApi.Models;
 using System.Security.Cryptography.Xml;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel;
 
 namespace TESTE_API
 {
@@ -20,7 +21,6 @@ namespace TESTE_API
             // Add services to the container.
 
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(c =>
             {

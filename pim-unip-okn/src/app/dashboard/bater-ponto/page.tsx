@@ -58,17 +58,20 @@ export default function DashboardPonto() {
   function handleClickPoint() {
     const date = new Date();
     const currentMonth = date.getMonth() + 1;
-    const formatedToday = date.toISOString();
+    const formatedTodayISO = date.toISOString();
+    const formatedTodaySlice = formatedTodayISO.slice(0, -1);
 
     try {
       const response = axios.post("http://localhost:8000/controle-de-horas", {
         idFuncionario: emplooy?.id_funcionario,
         mes: currentMonth,
-        dataEntrada: formatedToday,
-        dataSaida: formatedToday,
+        dataEntrada: formatedTodaySlice,
+        dataSaida: formatedTodaySlice,
       });
     } catch (error) {
-      console.error("Erro ao fazer requisição", error);
+      console.error("Erro ao fazer login", error);
+    } finally {
+      console.log("sucesso");
     }
   }
   return (

@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace TESTE_API.ViewModel
 {
@@ -6,11 +8,7 @@ namespace TESTE_API.ViewModel
     {
         public int IdFuncionario { get; set; }
         public int Mes { get; set; }
-
-        [DataType(DataType.DateTime)]
         public DateTime DataEntrada { get; set; }
-
-        [DataType(DataType.DateTime)]
         public DateTime DataSaida { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 using System.Net.WebSockets;
 using TESTE_API.Entities;
 using TESTE_API.Infraestrutura;
@@ -24,7 +25,7 @@ namespace TESTE_API.Controllers
         public ActionResult PostControleDeHoras([FromBody] ControleDeHorasInputModel input)
         {
             // Cálculo das horas totais
-            TimeSpan horasTotais = input.DataSaida - input.DataEntrada;
+            TimeSpan horasTotais = input.DataSaida.Date - input.DataEntrada.Date;
             decimal horasTotaisDecimal = (decimal)horasTotais.TotalHours;
 
             // Inserção dos dados no banco de dados
@@ -32,8 +33,8 @@ namespace TESTE_API.Controllers
             {
                 IdFuncionario = input.IdFuncionario,
                 Mes = input.Mes,
-                DataEntrada = input.DataEntrada,
-                DataSaida = input.DataSaida,
+                DataEntrada = input.DataEntrada.Date,
+                DataSaida = input.DataSaida.Date,
                 HorasTotal = horasTotaisDecimal
             };
 

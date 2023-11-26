@@ -484,3 +484,8 @@ C:\Users\tiago\OneDrive\Área de Trabalho\docker-pim-project\api-pim-aml\TESTE-A
 C:\Users\tiago\OneDrive\Área de Trabalho\docker-pim-project\api-pim-aml\TESTE-API\obj\Debug\net7.0\TESTE-API.pdb
 C:\Users\tiago\OneDrive\Área de Trabalho\docker-pim-project\api-pim-aml\TESTE-API\obj\Debug\net7.0\TESTE-API.genruntimeconfig.cache
 C:\Users\tiago\OneDrive\Área de Trabalho\docker-pim-project\api-pim-aml\TESTE-API\obj\Debug\net7.0\ref\TESTE-API.dll
+C:\Users\tiago\OneDrive\Área de Trabalho\docker-pim-project\api-pim-aml\TESTE-API\bin\Debug\net7.0\System.Web.Cors.dll
+C:\Users\tiago\OneDrive\Área de Trabalho\docker-pim-project\api-pim-aml\TESTE-API\bin\Debug\net7.0\System.Net.Http.Formatting.dll
+C:\Users\tiago\OneDrive\Área de Trabalho\docker-pim-project\api-pim-aml\TESTE-API\bin\Debug\net7.0\System.Web.Http.dll
+C:\Users\tiago\OneDrive\Área de Trabalho\docker-pim-project\api-pim-aml\TESTE-API\bin\Debug\net7.0\System.Web.Http.Cors.dll
+C:\Users\tiago\OneDrive\Área de Trabalho\docker-pim-project\api-pim-aml\TESTE-API\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
