@@ -55,25 +55,45 @@ export default function DashboardPonto() {
     }
   }, [user?.certserialnumber]);
 
-  function handleClickPoint() {
+  const handleClickPoint = async () => {
     const date = new Date();
     const currentMonth = date.getMonth() + 1;
     const formatedTodayISO = date.toISOString();
     const formatedTodaySlice = formatedTodayISO.slice(0, -1);
+    const getEnter = localStorage.getItem("enter");
+    const getExit = localStorage.getItem("exit");
 
-    try {
-      const response = axios.post("http://localhost:8000/controle-de-horas", {
-        idFuncionario: emplooy?.id_funcionario,
-        mes: currentMonth,
-        dataEntrada: formatedTodaySlice,
-        dataSaida: formatedTodaySlice,
-      });
-    } catch (error) {
-      console.error("Erro ao fazer login", error);
-    } finally {
-      console.log("sucesso");
+    if (!getEnter) {
+      localStorage.setItem("enter", formatedTodaySlice);
+      console.log("ARMAZENADO ENTRADA");
+    } else {
+      localStorage.setItem("exit", formatedTodaySlice);
+      console.log("ARMAZENADO SAIDA");
     }
-  }
+    try {
+      if (getEnter && getExit) {
+        const response = await axios.post(
+          "http://localhost:8000/controle-de-horas",
+          {
+            idFuncionario: emplooy?.id_funcionario,
+            mes: currentMonth,
+            dataEntrada: getEnter,
+            dataSaida: getExit,
+          }
+        );
+        if (response.status === 200) {
+          console.log("Requisição bem-sucedida");
+        } else {
+          console.log(
+            "Requisição retornou um código diferente de 200:",
+            response.status
+          );
+        }
+      }
+    } catch (error) {
+      console.error("Erro na requisição", error);
+    }
+  };
   return (
     <section className={`${styles.point} wrapper`}>
       {loading ? (

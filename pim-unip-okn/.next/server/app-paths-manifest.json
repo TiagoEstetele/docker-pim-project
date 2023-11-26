@@ -1,6 +1,6 @@
 {
-  "/page": "app/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/dashboard/homepage/page": "app/dashboard/homepage/page.js",
-  "/dashboard/bater-ponto/page": "app/dashboard/bater-ponto/page.js"
+  "/page": "app/page.js",
+  "/dashboard/bater-ponto/page": "app/dashboard/bater-ponto/page.js",
+  "/dashboard/homepage/page": "app/dashboard/homepage/page.js"
 }
