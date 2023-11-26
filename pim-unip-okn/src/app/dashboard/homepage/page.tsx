@@ -4,6 +4,8 @@ import { Loading } from "@/componentes/general";
 import React, { useEffect, useState } from "react";
 import jwt from "jsonwebtoken";
 import axios from "axios";
+import Image from "next/image";
+import welcome from "../../../../public/welcome.jpg";
 
 interface User {
   role?: string;
@@ -51,17 +53,25 @@ export default function HomePage() {
       fetchData();
     }
   }, [user?.certserialnumber]);
-  console.log(emplooy);
 
   return (
-    <section className={styles.homepage}>
+    <section className={styles.homepage + "wrapper"}>
       {loading ? (
         <Loading />
       ) : (
-        <h1>
-          Bem-vindo, {emplooy?.nome}! Explore as diversas funcionalidades do
-          nosso sistema através das opções disponíveis no menu localizado acima.
-        </h1>
+        <div className={styles.homepage__contents}>
+          <h1>
+            Bem-vindo, <span>{emplooy?.nome}! </span>Explore as diversas
+            funcionalidades do nosso sistema através das{" "}
+            <span>opções disponíveis no menu localizado acima.</span>
+          </h1>
+          <Image
+            src={welcome}
+            width={welcome.width}
+            height={welcome.height}
+            alt="Imagem de Bem-vindo"
+          />
+        </div>
       )}
     </section>
   );

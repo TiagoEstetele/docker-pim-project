@@ -2,6 +2,7 @@
 import styles from "./perfil.module.scss";
 import Image from "next/image";
 import avatar from "../../../../public/employuseravatar.png";
+import crown from "../../../../public/crown-svgrepo-com.svg";
 import { Loading } from "@/componentes/general";
 import React, { useEffect, useState } from "react";
 import jwt from "jsonwebtoken";
@@ -14,6 +15,7 @@ interface User {
 
 type Emplooy = {
   id_funcionario: number;
+  id_cargo: number;
   nome: string;
   banco: string;
   telefone: string;
@@ -62,7 +64,7 @@ export default function Perfil() {
       fetchData();
     }
   }, [user?.certserialnumber]);
-  console.log(emplooy);
+
   return (
     <section className={`${styles.perfil} wrapper`}>
       {loading ? (
@@ -78,53 +80,80 @@ export default function Perfil() {
               quality={100}
             />
             <p>{emplooy?.nome}</p>
+            {emplooy?.id_cargo === 1 ? (
+              <div className={styles.perfil__office}>
+                <p>
+                  <Image
+                    src={crown}
+                    width={crown.width}
+                    height={crown.height}
+                    alt="Crown image"
+                    quality={100}
+                  />
+                  Administrador
+                </p>
+              </div>
+            ) : (
+              ""
+            )}
+
             <p>{emplooy?.cpf}</p>
           </div>
           <div className={styles.perfil__contents}>
-            <p>
-              <span>Nome Social: </span>
-              {emplooy?.nome_social}
-            </p>
-            <p>
-              <span>Email: </span>
-              {emplooy?.email}
-            </p>
-            <p>
-              <span>Telefone: </span>
-              {emplooy?.telefone}
-            </p>
-            <p>
-              <span>Data de Nascimento: </span>
-              {emplooy?.data_nascimento}
-            </p>
-            <p>
-              <span>Endereço: </span>
-              {emplooy?.endereco}
-            </p>
-            <p>
-              <span>Genero: </span>
-              {emplooy?.genero}
-            </p>
-            <p>
-              <span>CTPS: </span>
-              {emplooy?.ctps}
-            </p>
-            <p>
-              <span>Banco: </span>
-              {emplooy?.banco}
-            </p>
-            <p>
-              <span>Conta: </span>
-              {emplooy?.conta}
-            </p>
-            <p>
-              <span>Data de Admissão: </span>
-              {emplooy?.data_admissao}
-            </p>
-            <p>
-              <span>Salário Bruto: </span>
-              {emplooy?.salario_bruto}
-            </p>
+            <div className={styles.perfil__info}>
+              <h3>Minha conta</h3>
+              <p>Visualize suas informações pessoais abaixo.</p>
+            </div>
+            <div className={styles.perfil__infowrapper}>
+              <div className={styles.perfil__wrapper}>
+                <p>
+                  <span>Nome Social: </span>
+                  {emplooy?.nome_social}
+                </p>
+                <p>
+                  <span>Email: </span>
+                  {emplooy?.email}
+                </p>
+                <p>
+                  <span>Telefone: </span>
+                  {emplooy?.telefone}
+                </p>
+                <p>
+                  <span>Data de Nascimento: </span>
+                  {emplooy?.data_nascimento}
+                </p>
+                <p>
+                  <span>Conta: </span>
+                  {emplooy?.conta}
+                </p>
+                <p>
+                  <span>Data de Admissão: </span>
+                  {emplooy?.data_admissao}
+                </p>
+              </div>
+              <div className={styles.perfil__wrapper}>
+                <p>
+                  <span>Endereço: </span>
+                  {emplooy?.endereco}
+                </p>
+                <p>
+                  <span>Genero: </span>
+                  {emplooy?.genero}
+                </p>
+                <p>
+                  <span>CTPS: </span>
+                  {emplooy?.ctps}
+                </p>
+                <p>
+                  <span>Banco: </span>
+                  {emplooy?.banco}
+                </p>
+                <p>
+                  <span>Salário Bruto: </span>
+                  {emplooy?.salario_bruto}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       )}

@@ -1,13 +1,30 @@
+@import "../../../assets/sass/utilities/utilities";
 .homepage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
+  &__contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
 
-  & > h1 {
-    max-width: 60rem;
-    text-align: center;
-    font-weight: 400;
-    font-size: 2.7rem;
+    @include max(800) {
+      height: calc(100vh - 6.8rem);
+    }
+    & > h1 {
+      max-width: 60rem;
+      text-align: center;
+      font-weight: 400;
+      font-size: 2.7rem;
+      margin-bottom: 2rem;
+
+      & span {
+        color: #6916ca;
+      }
+    }
+
+    & img {
+      width: 50rem;
+      height: auto;
+    }
   }
 }

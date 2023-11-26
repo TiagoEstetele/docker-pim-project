@@ -126,4 +126,10 @@
       display: none;
     }
   }
+
+  &__userMobile {
+    @include min(800) {
+      display: none;
+    }
+  }
 }

@@ -7,6 +7,10 @@
   height: calc(100vh - 8rem);
   padding: 4rem 0;
 
+  @include max(800) {
+    padding: 0;
+  }
+
   &__card {
     -webkit-box-shadow: 10px 10px 56px -4px rgba(0, 0, 0, 0.18);
     -moz-box-shadow: 10px 10px 56px -4px rgba(0, 0, 0, 0.18);
@@ -16,42 +20,38 @@
     border-radius: 2rem;
     display: flex;
     justify-content: center;
-    gap: 10rem;
+    gap: 7rem;
     align-items: center;
     padding: 2rem;
+    flex-direction: column;
 
     @include max(800) {
-      flex-direction: column;
       gap: 2rem;
       height: 100%;
     }
   }
 
   &__avatar {
-    border-right: 0.1rem solid #6916ca;
-    padding-right: 10rem;
+    border-bottom: 0.1rem solid #6916ca;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 20%;
+    padding-bottom: 2rem;
 
     @include max(800) {
-      border-bottom: 0.1rem solid #6916ca;
-      padding-bottom: 2rem;
-      border-right: 0.1rem solid transparent;
-      padding-right: 0;
-      overflow: hidden;
-      overflow-y: scroll;
+      width: 100%;
     }
 
     & img {
       width: 10rem;
     }
-    & p {
+    & > p {
       text-align: center;
 
       &:first-of-type {
-        font-size: 1.6rem;
-        font-weight: 400;
+        font-size: 1.8rem;
+        font-weight: 600;
         padding: 0.5rem 0;
       }
 
@@ -65,7 +65,35 @@
     }
   }
 
+  &__office {
+    padding: 0.5rem 0;
+    & p {
+      font-size: 1.6rem;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+
+      & svg,
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+
   &__contents {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 5rem;
+
+    @include max(800) {
+      padding: 0;
+      overflow: hidden;
+      overflow-y: scroll;
+    }
     & > p {
       padding: 0.5rem 0;
       font-size: 1.4rem;
@@ -79,6 +107,49 @@
       color: #6916ca;
       font-size: 1.3rem;
       font-weight: 500;
+    }
+  }
+
+  &__info {
+    padding-bottom: 2rem;
+    border-bottom: 0.1rem solid #6916ca;
+
+    @include max(800) {
+      display: none;
+    }
+    & > h3 {
+      font-size: 2.7rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    & > p {
+      font-size: 1.7rem;
+      font-weight: 500;
+    }
+  }
+
+  &__infowrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    gap: 10rem;
+
+    @include max(800) {
+      flex-direction: column;
+      gap: 0;
+      padding-top: 0;
+    }
+  }
+
+  &__wrapper {
+    & p {
+      font-size: 1.6rem;
+      padding: 1rem 0;
+
+      & span {
+        font-weight: 600;
+      }
     }
   }
 }

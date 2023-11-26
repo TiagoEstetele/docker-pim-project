@@ -25,7 +25,7 @@
   height: auto;
   margin-left: 0.5rem;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
 }
 .EmployeesCard_employees__status__uNsKF div {
@@ -109,6 +109,26 @@
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/componentes/general/Logout/Logout.module.scss ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@media only screen and (min-width: 801px) {
+  .Logout_mobile-only__m9boz {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .Logout_desktop-only__4r6As {
+    display: none !important;
+  }
+}
+
+@keyframes Logout_moveUpDown__fdCvZ {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2rem);
+  }
+}
 .Logout_header__logout__wdqBS {
   position: relative;
 }
@@ -127,6 +147,12 @@
   box-shadow: 10px 10px 56px -4px rgba(0, 0, 0, 0.18);
   text-align: center;
   transition: 2s ease-in-out;
+}
+@media only screen and (max-width: 800px) {
+  .Logout_header__confirm__qfxPp {
+    top: -2rem;
+    left: 4rem;
+  }
 }
 .Logout_header__confirm__qfxPp > p {
   font-size: 1.3rem;
@@ -282,6 +308,11 @@
 }
 @media only screen and (max-width: 800px) {
   .Header_header__user__2fhV7 {
+    display: none;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .Header_header__userMobile__mUds9 {
     display: none;
   }
 }

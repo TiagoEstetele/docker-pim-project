@@ -3,7 +3,6 @@ import styles from "./Header.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import Avatar from "../../../../public/adminavatar.png";
 import jwt from "jsonwebtoken";
 import { Logout } from "@/componentes/general/";
 
@@ -111,6 +110,9 @@ export function Header() {
                 Bater Ponto
               </Link>
             </li>
+            <div className={styles.header__userMobile}>
+              <Logout open={logout} onClick={toggleOPen} />
+            </div>
           </ul>
         )}
 
