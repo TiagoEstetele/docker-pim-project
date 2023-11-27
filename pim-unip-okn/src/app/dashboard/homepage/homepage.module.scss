@@ -6,6 +6,7 @@
     align-items: center;
     flex-direction: column;
     height: 80vh;
+    padding: 2rem;
 
     @include max(800) {
       height: calc(100vh - 6.8rem);
@@ -16,6 +17,11 @@
       font-weight: 400;
       font-size: 2.7rem;
       margin-bottom: 2rem;
+      margin-top: 2rem;
+
+      @include max(800) {
+        font-size: 2rem;
+      }
 
       & span {
         color: #6916ca;
@@ -25,6 +31,10 @@
     & img {
       width: 50rem;
       height: auto;
+
+      @include max(800) {
+        width: 25rem;
+      }
     }
   }
 }

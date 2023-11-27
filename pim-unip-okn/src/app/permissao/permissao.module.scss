@@ -1,0 +1,32 @@
+@import "../../assets/sass/utilities/utilities";
+.permission {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 2rem;
+
+  & h3 {
+    font-size: 2rem;
+    max-width: 50rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  & img {
+    width: 50rem;
+
+    @include max(800) {
+      width: 25rem;
+    }
+  }
+
+  & button {
+    padding: 1rem 2rem;
+    background-color: #6916ca;
+    border-radius: 1rem;
+    color: #fff;
+    font-size: 1.6rem;
+  }
+}

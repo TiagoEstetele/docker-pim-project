@@ -1,16 +1,16 @@
 {
   "pages": {
-    "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
-    ],
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/page.css",
       "static/chunks/app/page.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
     ],
     "/dashboard/layout": [
       "static/chunks/webpack.js",
@@ -29,6 +29,23 @@
       "static/chunks/main-app.js",
       "static/css/app/dashboard/bater-ponto/page.css",
       "static/chunks/app/dashboard/bater-ponto/page.js"
+    ],
+    "/dashboard/perfil/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/dashboard/perfil/page.css",
+      "static/chunks/app/dashboard/perfil/page.js"
+    ],
+    "/permissao/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/permissao/page.css",
+      "static/chunks/app/permissao/page.js"
+    ],
+    "/permissao/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/permissao/layout.js"
     ],
     "/dashboard/funcionarios/page": [
       "static/chunks/webpack.js",
