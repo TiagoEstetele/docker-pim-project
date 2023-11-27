@@ -25,16 +25,20 @@ namespace TESTE_API.Controllers
         public ActionResult PostControleDeHoras([FromBody] ControleDeHorasInputModel input)
         {
             // Cálculo das horas totais
-            TimeSpan horasTotais = input.DataSaida.Date - input.DataEntrada.Date;
+            TimeSpan horasTotais = input.DataSaida - input.DataEntrada;
             decimal horasTotaisDecimal = (decimal)horasTotais.TotalHours;
+
+            string dataEntradaFormatada = input.DataEntrada.ToString("yyyy/MM/dd HH:mm:ss");
+            string dataSaidaFormatada = input.DataSaida.ToString("yyyy/MM/dd HH:mm:ss");
+
 
             // Inserção dos dados no banco de dados
             var controleDeHoras = new ControleDeHora
             {
                 IdFuncionario = input.IdFuncionario,
                 Mes = input.Mes,
-                DataEntrada = input.DataEntrada.Date,
-                DataSaida = input.DataSaida.Date,
+                DataEntrada = DateTime.ParseExact(dataEntradaFormatada, "yyyy/MM/dd HH:mm:ss", CultureInfo.InvariantCulture),
+                DataSaida = DateTime.ParseExact(dataSaidaFormatada, "yyyy/MM/dd HH:mm:ss", CultureInfo.InvariantCulture),
                 HorasTotal = horasTotaisDecimal
             };
 
