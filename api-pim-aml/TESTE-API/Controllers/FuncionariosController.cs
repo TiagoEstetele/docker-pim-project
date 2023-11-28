@@ -18,7 +18,6 @@ namespace TESTE_API.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "1")]
         public IActionResult Add(FuncionariosViewModel funcionariosView)
         {
             var funcionarios = new Entities.Funcionarios(funcionariosView.id_funcionario, funcionariosView.id_cargo, funcionariosView.nome, funcionariosView.telefone, funcionariosView.data_admissao, funcionariosView.ctps, funcionariosView.salario_bruto, funcionariosView.data_nascimento, funcionariosView.banco, funcionariosView.conta, funcionariosView.cpf, funcionariosView.email, funcionariosView.ativo, funcionariosView.nome_social, funcionariosView.genero, funcionariosView.endereco);

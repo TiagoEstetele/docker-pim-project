@@ -90,11 +90,8 @@ export default function DashboardPonto() {
     formattedDate += date.getDate().toString().padStart(2, "0") + "T";
     formattedDate += date.getHours().toString().padStart(2, "0") + ":";
     formattedDate += date.getMinutes().toString().padStart(2, "0") + ":";
-    formattedDate += date.getSeconds().toString().padStart(2, "0");
-
-    console.log(formattedDate);
-
-    console.log(date);
+    formattedDate += date.getSeconds().toString().padStart(2, "0") + ".";
+    formattedDate += date.getMilliseconds().toString().padStart(3, "0");
 
     if (!getEnter) {
       localStorage.setItem(`enter${emplooy?.id_funcionario}`, formattedDate);
