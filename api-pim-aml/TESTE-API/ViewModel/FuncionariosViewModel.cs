@@ -11,13 +11,13 @@ namespace TESTE_API.ViewModel
         public string nome { get; set; }
         public string telefone { get; set; }
 
-        [JsonConverter(typeof(DateOnlyConverter))]
-        public DateOnly data_admissao { get; set; }
+        //[JsonConverter(typeof(DateOnlyConverter))]
+        public string data_admissao { get; set; }
         public string ctps { get; set; }
         public decimal salario_bruto { get; set; }
 
-        [JsonConverter(typeof(DateOnlyConverter))]
-        public DateOnly data_nascimento { get; set; }
+        //[JsonConverter(typeof(DateOnlyConverter))]
+        public string data_nascimento { get; set; }
         public string banco { get; set; }
         public string conta { get; set; }
         public string cpf { get; set; }

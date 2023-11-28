@@ -20,7 +20,10 @@ namespace TESTE_API.Controllers
         [HttpPost]
         public IActionResult Add(FuncionariosViewModel funcionariosView)
         {
-            var funcionarios = new Entities.Funcionarios(funcionariosView.id_funcionario, funcionariosView.id_cargo, funcionariosView.nome, funcionariosView.telefone, funcionariosView.data_admissao, funcionariosView.ctps, funcionariosView.salario_bruto, funcionariosView.data_nascimento, funcionariosView.banco, funcionariosView.conta, funcionariosView.cpf, funcionariosView.email, funcionariosView.ativo, funcionariosView.nome_social, funcionariosView.genero, funcionariosView.endereco);
+            var funcionarios = new Entities.Funcionarios(funcionariosView.id_funcionario, funcionariosView.id_cargo,
+                funcionariosView.nome, funcionariosView.telefone, DateOnly.Parse(funcionariosView.data_admissao), funcionariosView.ctps,
+                funcionariosView.salario_bruto, DateOnly.Parse(funcionariosView.data_nascimento), funcionariosView.banco, funcionariosView.conta,
+                funcionariosView.cpf, funcionariosView.email, funcionariosView.ativo, funcionariosView.nome_social, funcionariosView.genero, funcionariosView.endereco);
             _funcionariosRepository.Add(funcionarios);
 
             return Ok(); 
@@ -53,7 +56,11 @@ namespace TESTE_API.Controllers
         [HttpPut("{id}")]
         public IActionResult Update(int id, FuncionariosViewModel funcionariosView)
         {
-            var funcionario = new Entities.Funcionarios(funcionariosView.id_funcionario, funcionariosView.id_cargo, funcionariosView.nome, funcionariosView.telefone, funcionariosView.data_admissao, funcionariosView.ctps, funcionariosView.salario_bruto, funcionariosView.data_nascimento, funcionariosView.banco, funcionariosView.conta, funcionariosView.cpf, funcionariosView.email, funcionariosView.ativo, funcionariosView.nome_social, funcionariosView.genero, funcionariosView.endereco);
+            var funcionario = new Entities.Funcionarios(funcionariosView.id_funcionario, funcionariosView.id_cargo,
+                funcionariosView.nome, funcionariosView.telefone, DateOnly.Parse(funcionariosView.data_admissao), funcionariosView.ctps,
+                funcionariosView.salario_bruto, DateOnly.Parse(funcionariosView.data_nascimento), funcionariosView.banco, funcionariosView.conta,
+                funcionariosView.cpf, funcionariosView.email, funcionariosView.ativo, funcionariosView.nome_social, funcionariosView.genero,
+                funcionariosView.endereco);
 
             // Defina o ID do funcionário com base no parâmetro da rota.
             funcionario.id_funcionario = id;

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\bunda sexy\\docker-pim-project\\api-pim-aml\\TESTE-API\\TESTE-API.csproj": {}
+    "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\docker-pim-project\\api-pim-aml\\TESTE-API\\TESTE-API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\bunda sexy\\docker-pim-project\\api-pim-aml\\TESTE-API\\TESTE-API.csproj": {
+    "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\docker-pim-project\\api-pim-aml\\TESTE-API\\TESTE-API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\bunda sexy\\docker-pim-project\\api-pim-aml\\TESTE-API\\TESTE-API.csproj",
+        "projectUniqueName": "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\docker-pim-project\\api-pim-aml\\TESTE-API\\TESTE-API.csproj",
         "projectName": "TESTE-API",
-        "projectPath": "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\bunda sexy\\docker-pim-project\\api-pim-aml\\TESTE-API\\TESTE-API.csproj",
+        "projectPath": "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\docker-pim-project\\api-pim-aml\\TESTE-API\\TESTE-API.csproj",
         "packagesPath": "C:\\Users\\tiago\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\bunda sexy\\docker-pim-project\\api-pim-aml\\TESTE-API\\obj\\",
+        "outputPath": "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\docker-pim-project\\api-pim-aml\\TESTE-API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

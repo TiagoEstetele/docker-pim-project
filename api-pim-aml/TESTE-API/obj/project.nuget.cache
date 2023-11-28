@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1+i8alfy+iBgdDs75ii6Sco97kUi8zKc0OvJmI1c+Hn5lXJFCCrMJTgLomISv661NBmHb/xnAlRokVOfuA8J+g==",
+  "dgSpecHash": "Yj1KEByyp4l31qrEg1PolMpaq/s1bQozU24qz3I6V8Yf/DuvfdU1zpVTJqOOpLl6JLBX4tpScpoUpt31Rqitfw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\bunda sexy\\docker-pim-project\\api-pim-aml\\TESTE-API\\TESTE-API.csproj",
+  "projectFilePath": "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\docker-pim-project\\api-pim-aml\\TESTE-API\\TESTE-API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tiago\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\tiago\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
