@@ -1,7 +1,14 @@
+@import "../../../assets/sass/utilities/utilities";
+
 .employees {
   height: calc(100vh - 8rem);
   width: 100%;
   padding: 5rem 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   &__cards {
     padding: 2rem 0;
@@ -10,5 +17,69 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+  }
+
+  &__modal {
+    position: absolute;
+    z-index: 999;
+    transition: 0.5s ease-in-out;
+    padding: 1rem;
+    height: 20%;
+    width: 20%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 56px -4px rgba(0, 0, 0, 0.18);
+    opacity: 0;
+    transform: translateY(-2rem);
+    pointer-events: none;
+    gap: 2rem;
+
+    @include max(800) {
+      width: 100%;
+      height: 30%;
+    }
+
+    &[data-show="true"] {
+      opacity: 1;
+      transform: translateY(0rem);
+      pointer-events: all;
+    }
+
+    & h3 {
+      font-size: 1.6rem;
+      text-align: center;
+
+      & span {
+        color: #6916ca;
+      }
+    }
+
+    & button {
+      padding: 1rem 2rem;
+      color: #fff;
+      font-size: 1.3rem;
+      border-radius: 1rem;
+      background-color: #6916ca;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 2rem;
+
+    & button {
+      font-size: 1.4rem;
+      font-weight: 500;
+      &:first-of-type {
+        background-color: #8bf42b;
+      }
+      &:last-of-type {
+        background-color: #f74236;
+      }
+    }
   }
 }

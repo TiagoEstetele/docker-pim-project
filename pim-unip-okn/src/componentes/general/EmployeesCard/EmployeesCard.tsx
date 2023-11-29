@@ -7,7 +7,7 @@ export default interface EmployeesCardProps {
   telefone: string;
   dataAdmissao: string;
   dataNascimento: string;
-  ativo: true | false;
+  id: number;
 }
 
 export function EmployeesCard({
@@ -16,8 +16,12 @@ export function EmployeesCard({
   telefone,
   dataAdmissao,
   dataNascimento,
-  ativo,
-}: EmployeesCardProps) {
+  id,
+  onDelete,
+}: EmployeesCardProps & { onDelete: (id: number) => void }) {
+  const handleDeleteClick = () => {
+    onDelete(id);
+  };
   return (
     <>
       <div className={styles.employees__card}>
@@ -27,11 +31,9 @@ export function EmployeesCard({
             <p>{cargo}</p>
           </div>
           <div className={styles.employees__status}>
-            {ativo === true ? (
-              <div style={{ backgroundColor: "#8bf42b" }}></div>
-            ) : (
-              <div style={{ backgroundColor: "#db4437" }}></div>
-            )}
+            <div className={styles.employees__id}>
+              <p>{id}</p>
+            </div>
           </div>
         </article>
         <div className={styles.employees__contents}>
@@ -53,7 +55,7 @@ export function EmployeesCard({
             <button>Editar</button>
           </div>
           <div>
-            <button>Excluir</button>
+            <button onClick={handleDeleteClick}>Excluir</button>
           </div>
         </div>
       </div>

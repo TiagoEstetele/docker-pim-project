@@ -1,5 +1,11 @@
 {
   "pages": {
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -12,17 +18,34 @@
       "static/css/app/dashboard/layout.css",
       "static/chunks/app/dashboard/layout.js"
     ],
-    "/dashboard/funcionarios/page": [
+    "/dashboard/homepage/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/dashboard/funcionarios/page.css",
-      "static/chunks/app/dashboard/funcionarios/page.js"
+      "static/css/app/dashboard/homepage/page.css",
+      "static/chunks/app/dashboard/homepage/page.js"
     ],
     "/dashboard/cadastrar-funcionarios/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/dashboard/cadastrar-funcionarios/page.css",
       "static/chunks/app/dashboard/cadastrar-funcionarios/page.js"
+    ],
+    "/permissao/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/permissao/page.css",
+      "static/chunks/app/permissao/page.js"
+    ],
+    "/permissao/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/permissao/layout.js"
+    ],
+    "/dashboard/funcionarios/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/dashboard/funcionarios/page.css",
+      "static/chunks/app/dashboard/funcionarios/page.js"
     ]
   }
 }

@@ -20,20 +20,8 @@
   display: flex;
   justify-content: space-between;
 }
-.EmployeesCard_employees__status__uNsKF {
-  width: 4rem;
-  height: auto;
-  margin-left: 0.5rem;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-.EmployeesCard_employees__status__uNsKF div {
-  width: 0.5rem;
-  height: 0.5rem;
-  padding: 0.5rem;
-  border-radius: 50%;
-  background-color: #6916ca;
+.EmployeesCard_employees__id__Ye3Bn p {
+  display: none;
 }
 .EmployeesCard_employees__main__BtBYC {
   display: flex;

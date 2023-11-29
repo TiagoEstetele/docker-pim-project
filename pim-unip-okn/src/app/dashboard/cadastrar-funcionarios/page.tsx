@@ -1,26 +1,30 @@
 "use client";
 import styles from "./cadastrarfuncionarios.module.scss";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import React, { useState } from "react";
 
 export default function CadastrarFuncionarios() {
   const [formData, setFormData] = useState({
-    name: "",
+    nome: "",
     email: "",
     cpf: "",
-    nascimento: "",
+    data_nascimento: "",
     telefone: "",
     data_admissao: "",
     conta: "",
-    agencia: "",
     salario_bruto: "",
-    CTPS: "",
+    ctps: "",
     endereco: "",
     nome_social: "",
     genero: "Masculino",
     ativo: true,
     id_cargo: 1,
+    id_funcionario: 0,
+    banco: "",
   });
+  const [modalSucess, setModalSucess] = useState(false);
+  const [blurSucess, setBlurSucess] = useState(false);
 
   const handleInputChange = (e: any) => {
     const { id, value } = e.target;
@@ -43,46 +47,81 @@ export default function CadastrarFuncionarios() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    console.log(formData);
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/api/v1/funcionarios",
+        {
+          id_funcionario: formData.id_funcionario,
+          id_cargo: formData.id_cargo,
+          nome: formData.nome,
+          telefone: formData.telefone,
+          data_admissao: formData.data_admissao,
+          ctps: formData.ctps,
+          salario_bruto: formData.salario_bruto,
+          data_nascimento: formData.data_nascimento,
+          banco: formData.banco,
+          conta: formData.conta,
+          cpf: formData.cpf,
+          email: formData.email,
+          ativo: formData.ativo,
+          nome_social: formData.nome_social,
+          genero: formData.genero,
+          endereco: formData.endereco,
+        }
+      );
 
-    // try {
-    //   const response = await axios.post(
-    //     "http://localhost:8000/api/v1/funcionarios/",
-    //     formData
-    //   );
-
-    //   // Lógica adicional após o sucesso, se necessário
-    //   console.log("Funcionário cadastrado com sucesso!", response.data);
-    // } catch (error) {
-    //   // Lidar com erros da requisição
-    //   console.error("Erro ao cadastrar funcionário:", error);
-    // }
+      if (response.status === 200) {
+        setModalSucess(true);
+        setBlurSucess(true);
+      }
+    } catch (error) {
+      console.error("Erro ao cadastrar funcionário:", error);
+    }
   };
 
   return (
     <section className={`${styles.register} wrapper`}>
-      <article className={styles.register__form}>
-        <form action="" onSubmit={handleSubmit}>
+      <div
+        data-show={modalSucess === true ? "true" : "false"}
+        className={styles.register__modal}
+      >
+        <h3>
+          Cadastrado com <span>sucesso!</span>
+        </h3>
+        <Link href="./funcionarios">
+          <button>Ok</button>
+        </Link>
+      </div>
+      <article
+        data-blur={blurSucess === true ? "true" : "false"}
+        className={styles.register__form}
+      >
+        <form onSubmit={handleSubmit}>
           <h2>Cadastrar funcionários</h2>
           <div className={styles.register__break}>
-            <label htmlFor="name">
+            <label htmlFor="nome">
               Nome Completo
               <input
                 required
-                id="name"
+                id="nome"
                 type="text"
                 onChange={handleInputChange}
               />
             </label>
             <label htmlFor="email">
               Email
-              <input id="email" type="text" onChange={handleInputChange} />
+              <input
+                placeholder="seuemail@email.com"
+                id="email"
+                type="text"
+                onChange={handleInputChange}
+              />
             </label>
           </div>
 
           <div className={styles.register__break}>
             <label htmlFor="cpf">
-              CPF
+              CPF (informe somente números)
               <input
                 required
                 id="cpf"
@@ -94,7 +133,7 @@ export default function CadastrarFuncionarios() {
               Data de data_Nascimento
               <input
                 required
-                id="nascimento"
+                id="data_nascimento"
                 type="date"
                 onChange={handleInputChange}
               />
@@ -103,8 +142,9 @@ export default function CadastrarFuncionarios() {
 
           <div className={styles.register__break}>
             <label htmlFor="telefone">
-              Telefone
+              Telefone (informe somente números)
               <input
+                placeholder="1234567890"
                 required
                 id="telefone"
                 type="number"
@@ -132,20 +172,11 @@ export default function CadastrarFuncionarios() {
                 onChange={handleInputChange}
               />
             </label>
-            <label htmlFor="agencia">
-              Agência
-              <input
-                required
-                id="agencia"
-                type="text"
-                onChange={handleInputChange}
-              />
-            </label>
           </div>
 
           <div className={styles.register__break}>
             <label htmlFor="salario_bruto">
-              Salário
+              Salário bruto
               <input
                 required
                 id="salario_bruto"
@@ -157,7 +188,7 @@ export default function CadastrarFuncionarios() {
               CTPS
               <input
                 required
-                id="CTPS"
+                id="ctps"
                 type="text"
                 onChange={handleInputChange}
               />
@@ -168,6 +199,7 @@ export default function CadastrarFuncionarios() {
             <label htmlFor="banco">
               Banco
               <input
+                placeholder="Bradesco"
                 required
                 id="banco"
                 type="text"
