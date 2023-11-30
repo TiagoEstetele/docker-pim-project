@@ -147,7 +147,7 @@ export default function CadastrarFuncionarios() {
                 placeholder="1234567890"
                 required
                 id="telefone"
-                type="number"
+                type="tel"
                 onChange={handleInputChange}
               />
             </label>

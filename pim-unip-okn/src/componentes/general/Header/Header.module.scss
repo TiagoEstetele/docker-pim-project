@@ -37,7 +37,7 @@
       clip-path: circle(100px at 90% -15%);
       transition: 1s ease-out;
       pointer-events: none;
-
+      z-index: 998;
       &[data-show="true"] {
         clip-path: circle(1500px at 90% -15%) !important;
         pointer-events: all !important;

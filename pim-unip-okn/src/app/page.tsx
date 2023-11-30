@@ -2,7 +2,6 @@
 import styles from "./login.module.scss";
 import Logo from "../../public/logooknpng.png";
 import Image from "next/image";
-import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
@@ -49,9 +48,7 @@ export default async function Home() {
             Senha
             <input id="password" type="password" />
           </label>
-          <div className={styles.login__forgot}>
-            <Link href="#">Esqueceu a senha?</Link>
-          </div>
+
           <button>Entrar</button>
         </form>
       </div>

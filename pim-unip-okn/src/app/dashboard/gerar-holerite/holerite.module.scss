@@ -1,0 +1,159 @@
+@import "../../../assets/sass/utilities/utilities";
+.holerite {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  gap: 5rem;
+
+  &__input {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 4rem;
+    & label {
+      font-size: 1.7rem;
+    }
+
+    & select {
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      background-color: #fff;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__button {
+    & button {
+      padding: 1rem 2rem;
+      background-color: #6916ca;
+      color: #fff;
+      font-size: 1.6rem;
+      border-radius: 1rem;
+    }
+  }
+
+  &__contents {
+    width: 70%;
+
+    @include max(800) {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    & p {
+      font-size: 1.3rem;
+      font-weight: 500;
+      padding: 0.5rem 0;
+
+      & span {
+        font-weight: 600;
+      }
+    }
+
+    & h4 {
+      font-size: 1.3rem;
+
+      @include max(800) {
+        font-size: 1rem;
+      }
+    }
+
+    & h2 {
+      @include max(800) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__contentSalario {
+    width: 100%;
+    & p {
+      font-size: 1.3rem;
+      font-weight: 500;
+      padding: 0.5rem 0;
+
+      & span {
+        font-weight: 600;
+      }
+    }
+
+    & h4 {
+      font-size: 1.3rem;
+      @include max(800) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.1rem solid #6916ca;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  &__emplooy {
+    border: 0.1rem solid #6916ca;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__desc {
+    border: 0.1rem solid #6916ca;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__salario {
+    border: 0.1rem solid #6916ca;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & p {
+      font-size: 1.5rem;
+
+      & span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__valores {
+    display: flex;
+    justify-content: space-between;
+    & h2 {
+      margin-bottom: 1rem;
+    }
+
+    & p {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__break {
+    display: flex;
+    justify-content: space-between;
+  }
+}

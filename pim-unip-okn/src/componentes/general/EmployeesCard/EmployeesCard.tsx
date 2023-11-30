@@ -18,9 +18,17 @@ export function EmployeesCard({
   dataNascimento,
   id,
   onDelete,
-}: EmployeesCardProps & { onDelete: (id: number) => void }) {
+  onEdit,
+}: EmployeesCardProps & {
+  onDelete: (id: number) => void;
+  onEdit: (id: number) => void;
+}) {
   const handleDeleteClick = () => {
     onDelete(id);
+  };
+
+  const handleEditClick = () => {
+    onEdit(id);
   };
   return (
     <>
@@ -52,7 +60,7 @@ export function EmployeesCard({
         </div>
         <div className={styles.employees__buttons}>
           <div>
-            <button>Editar</button>
+            <button onClick={handleEditClick}>Editar</button>
           </div>
           <div>
             <button onClick={handleDeleteClick}>Excluir</button>

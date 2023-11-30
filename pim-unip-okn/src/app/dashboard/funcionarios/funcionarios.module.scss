@@ -1,7 +1,7 @@
 @import "../../../assets/sass/utilities/utilities";
 
 .employees {
-  height: calc(100vh - 8rem);
+  height: 100%;
   width: 100%;
   padding: 5rem 1rem;
   position: relative;
@@ -9,6 +9,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @include max(800) {
+    height: 100%;
+  }
 
   &__cards {
     padding: 2rem 0;
